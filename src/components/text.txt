@@ -1,0 +1,11 @@
+    // const savedData = { goldrate, wastage, gstgold, total };
+    // const existingSavedValues =
+    //   JSON.parse(localStorage.getItem('savedValues')) || [];
+    // const updatedSavedValues = [...existingSavedValues, savedData];
+    // localStorage.setItem('savedValues', JSON.stringify(updatedSavedValues));
+    // setSavedValues(updatedSavedValues);
+
+
+       // const savedValuesFromLocalStorage =
+    //   JSON.parse(localStorage.getItem('savedValues')) || [];
+    // setSavedValues(savedValuesFromLocalStorage);

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Floral Stud Earrings",
+    "description": "Alluring Floral Gold Stud Earrings for Kids",
+    "price": 13487,
+    "discountPercentage": 12.96,
+    "rating": 4.69,
+    "stock": 94,
+    "brand": "Aura",
+    "category": "Earings",
+    "thumbnail": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw52f8b42e/images/hi-res/510160SPAAGA00_1.jpg?sw=640&sh=640"
+  },
+  {
+    "id": 2,
+    "title": "Diamond Ring",
+    "description": "Sparkling Brilliance Diamond Finger Ring",
+    "price": 19290,
+    "discountPercentage": 17.94,
+    "rating": 4.44,
+    "stock": 34,
+    "brand": "Aura",
+    "category": "Rings",
+    "thumbnail": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw114f8973/images/hi-res/500005FGAAA09_1.jpg?sw=640&sh=640"
+  },
+  {
+    "id": 3,
+    "title": "Ballerina Pendant",
+    "description": "Artistic Ballerina Pendant For Kids with 24 karat",
+    "price": 9756,
+    "discountPercentage": 15.46,
+    "rating": 4.09,
+    "stock": 36,
+    "brand": "Aura",
+    "category": "Pendant",
+    "thumbnail": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwe3d58036/images/hi-res/510900PPAAAA00_1.jpg?sw=640&sh=640"
+  },
+  {
+    "id": 4,
+    "title": "Diamond Pendant",
+    "description": "Delicate Web Diamond Pendant with Chain",
+    "price": 31923,
+    "discountPercentage": 17.91,
+    "rating": 4.3,
+    "stock": 123,
+    "brand": "Aura",
+    "category": "Diamond",
+    "thumbnail": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw51f6460d/images/hi-res/50D2FFGMQAA09_1.jpg?sw=640&sh=640"
+  },
+  {
+    "id": 5,
+    "title": "Flower Diamond Stud",
+    "description": "Sparkling Flower Diamond Stud Earrings",
+    "price": 499,
+    "discountPercentage": 10.58,
+    "rating": 4.09,
+    "stock": 32,
+    "brand": "Aura",
+    "category": "Stud",
+    "thumbnail": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw4ff77b7c/images/hi-res/50D2I2SIOADA09_1.jpg?sw=640&sh=640"
+  },
+  {
+    "id": 6,
+    "title": "Flowerbud Stud",
+    "description": "Brilliant Flowerbud Pearls and Diamond Stud Earrings",
+    "price": 1749,
+    "discountPercentage": 11.02,
+    "rating": 4.57,
+    "stock": 83,
+    "brand": "Aura",
+    "category": "Stud",
+    "thumbnail": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwffbe7c97/images/hi-res/501720SAMADA32_1.jpg?sw=640&sh=640"
+  },
+  {
+    "id": 7,
+    "title": " Cluster Diamond Bracelet",
+    "description": "Stylish Cluster Diamond Bracelet",
+    "price": 46624,
+    "discountPercentage": 4.15,
+    "rating": 4.25,
+    "stock": 50,
+    "brand": "Aura",
+    "category": "Bracelet",
+    "thumbnail": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwdd24b717/images/hi-res/50D2PTBPBAA09_1.jpg?sw=640&sh=640"
+  },
+  {
+    "id": 8,
+    "title": "Lovely Floral Necklace Set",
+    "description": "Lovely Floral Necklace Set",
+    "price": 109758,
+    "discountPercentage": 10.23,
+    "rating": 4.43,
+    "stock": 68,
+    "brand": "Aura",
+    "category": "Necklace",
+    "thumbnail": "https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw23940378/images/hi-res/51D3B22EBABA00_1.jpg?sw=640&sh=640"
+  }
+]
