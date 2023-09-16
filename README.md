@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+<h1>Mern Project</h1>
+                                                <h3>Gold Rate Website with Live and Calculator</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>In this website I have created the LIVE Gold Rates status and Calculator for countries Based and user have own profile to save the deatils and can make own details in this website</h2>
 
-## Available Scripts
+<h4>Website Functionalties</h4>
+<ul>
+  <li>Home page</li>
+  <li>Authentication & Authorization</li>
+  <li>Gold Rate Live & News</li>
+  <li>Gold Rate Calculator & any countires you want</li
+</ul>
 
-In the project directory, you can run:
+<h4>Used Technologies</h4>
+<h6>ForntEnd</h6>
+<ul>
+  <li>HTML & CSS</li>
+  <li>BootStrap</li>
+  <li>JavaScript</li>
+  <li>ReactJs</li>
+</ul>
 
-### `npm start`
+<h6>BackEnd</h6>
+<ul>
+  <li>NodeJs</li>
+  <li>MongoDB</li>
+  <li>ExpressJs</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>Demo Link -- https://6505b09225bea31c9a9fd43a--silver-haupia-df4d2b.netlify.app/</h3>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+![Page 1](https://github.com/GowthamaViknesh/Gold-Rate-Calculator-ForntEnd/assets/133188448/e68a5d17-4d04-48c3-9d23-77fc0989c6c9)
+![Page 5](https://github.com/GowthamaViknesh/Gold-Rate-Calculator-ForntEnd/assets/133188448/f8876322-1c2b-44ba-9f3f-d48429a945a6)
+![Page 4](https://github.com/GowthamaViknesh/Gold-Rate-Calculator-ForntEnd/assets/133188448/71f2df99-41ff-4fe8-90b8-8853c25335ed)
+![Page 3](https://github.com/GowthamaViknesh/Gold-Rate-Calculator-ForntEnd/assets/133188448/22321096-170e-4bc6-9913-33ff8fa23db3)
+![Page 2](https://github.com/GowthamaViknesh/Gold-Rate-Calculator-ForntEnd/assets/133188448/9d6af9ff-2702-4150-b432-c6c0000c032b)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h4>Used Tools</h4>
+<ul>
+  <li>VS-Code</li>
+  <li>MongoDB-Atlas/Compass</li>
+  <li>PostMan-API Testing</li>
+  <li>CodeSandBox</li>
+</ul>
