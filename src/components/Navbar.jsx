@@ -12,8 +12,7 @@ import { UserContext } from '../context/context';
 import { useContext } from 'react';
 
 const Navbar = () => {
-  const { loggedIn, setLoggedIn } = useContext(UserContext);
-  console.log(loggedIn);
+  const { loggedIn } = useContext(UserContext);
 
   return (
     <nav className='navbar navbar-expand-lg'>
@@ -46,12 +45,8 @@ const Navbar = () => {
               Home
             </Link>
 
-            {!loggedIn ? (
-              <Link className='nav-link' to='/login'>
-                <FontAwesomeIcon icon={faArrowRightFromBracket} />
-                Login
-              </Link>
-            ) : (
+            {loggedIn ? (
+              // Render links for authenticated users
               <>
                 <Link className='nav-link' to='/livegoldrate'>
                   <FontAwesomeIcon icon={faArrowTrendUp} />
@@ -66,6 +61,12 @@ const Navbar = () => {
                   Profile
                 </Link>
               </>
+            ) : (
+              // Render links for non-authenticated users
+              <Link className='nav-link' to='/login'>
+                <FontAwesomeIcon icon={faArrowRightFromBracket} />
+                Login
+              </Link>
             )}
           </div>
         </div>

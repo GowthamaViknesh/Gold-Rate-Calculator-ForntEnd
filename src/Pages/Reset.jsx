@@ -9,15 +9,16 @@ const Reset = () => {
   const [password, setPassword] = useState();
   const [confirmpassword, setconfirmpassword] = useState();
 
-  const handlePassWord = () => {
+  const handlePassWord = async () => {
     try {
-      axios
+      await axios
         .post('/reset', {
           password,
           confirmpassword,
+          token: window.localStorage.getItem('token'),
         })
         .then((res) => {
-          console.log(res.data.message);
+          console.log(res);
           if (res.data.status) {
             toast.success(res.data.message);
             navigate('/');

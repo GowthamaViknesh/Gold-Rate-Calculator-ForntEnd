@@ -1,0 +1,84 @@
+{
+  "countries": [
+    {
+      "name": "India",
+      "currency": "INR",
+      "gold_rate_per_gram": 4500
+    },
+    {
+      "name": "United States",
+      "currency": "USD",
+      "gold_rate_per_gram": 50.75
+    },
+    {
+      "name": "United Kingdom",
+      "currency": "GBP",
+      "gold_rate_per_gram": 37.8
+    },
+    {
+      "name": "Australia",
+      "currency": "AUD",
+      "gold_rate_per_gram": 70.4
+    },
+    {
+      "name": "Algeria",
+      "currency": "DZD",
+      "gold_rate_per_gram": 80.9
+    },
+    {
+      "name": "Libya",
+      "currency": "LYD",
+      "gold_rate_per_gram": 61.85
+    },
+    {
+      "name": "Malawi",
+      "currency": "CAD",
+      "gold_rate_per_gram": 60.9
+    },
+    {
+      "name": "Mali",
+      "currency": "MWK",
+      "gold_rate_per_gram": 90.9
+    },
+    {
+      "name": "Sudan",
+      "currency": "SDG",
+      "gold_rate_per_gram": 120.2
+    },
+    {
+      "name": "Western Sahara*",
+      "currency": "EUR",
+      "gold_rate_per_gram": 160.9
+    },
+    {
+      "name": "Zimbabwe",
+      "currency": "ZWN",
+      "gold_rate_per_gram": 90.8
+    },
+    {
+      "name": "Afghanistan",
+      "currency": "AFN",
+      "gold_rate_per_gram": 40.5
+    },
+    {
+      "name": "Bangladesh",
+      "currency": "BDT",
+      "gold_rate_per_gram": 10.9
+    },
+    {
+      "name": "Bhutan",
+      "currency": "BTN",
+      "gold_rate_per_gram": 790.9
+    },
+    {
+      "name": "China",
+      "currency": "CNY",
+      "gold_rate_per_gram": 10.9
+    },
+    {
+      "name": "Hong Kong",
+      "currency": "HKD",
+      "gold_rate_per_gram": 6.9
+    }
+  ]
+}

@@ -475,8 +475,8 @@ b {
 
 .btn-gold {
   width: 10rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 3px;
 }
 
 input[type='number']::-webkit-inner-spin-button {
@@ -484,13 +484,19 @@ input[type='number']::-webkit-inner-spin-button {
 }
 
 .input-gold {
-  width: 360px;
+  width: 390px;
+  height: 60px;
   background-color: white;
   color: black;
   border-radius: 10px;
   padding-inline: 10px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin-top: 5px;
+}
+
+.table-card {
+  margin-top: 150px;
 }
 
 .but-gold {
@@ -499,8 +505,8 @@ input[type='number']::-webkit-inner-spin-button {
 }
 
 .calculator-card {
-  width: 25rem;
-  height: 30rem;
+  width: 27rem;
+  height: 40rem;
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -682,5 +688,15 @@ input[type='number']::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Ensures the container takes up the full height of the parent */
+  height: 100%;
+}
+
+.otp-email {
+  color: var(--bg-color-alt);
+  font-size: var(--h5-font-size);
+}
+
+.login-form {
+  color: var(--bg-color-alt);
+  text-shadow: 1px 1px 2px;
 }

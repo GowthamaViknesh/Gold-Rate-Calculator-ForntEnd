@@ -1,8 +1,5 @@
-import { useState } from 'react';
-import axios from 'axios';
 import model from '../Assets/loginmodel.jpg';
-import { toast } from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../context/context';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,35 +7,18 @@ import {
   faLock,
   faRightToBracket,
 } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
 
 const Login = () => {
-  const navigate = useNavigate();
-
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const loginUser = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    axios
-      .post('/login', {
-        email,
-        password,
-      })
-      .then((res) => {
-        console.log(res);
-        if (res.data.status) {
-          toast.success(res.data.message);
-          navigate('/');
-        } else {
-          toast.error(res.data.message);
-        }
-      })
-      .catch((error) => {
-        console.log('error', error);
-      });
-  };
+  const {
+    isLoading,
+    loggedIn,
+    setEmail,
+    setPassword,
+    email,
+    password,
+    loginUser,
+  } = useContext(UserContext);
 
   return (
     <div className='container mt-5 me-2'>
@@ -83,12 +63,7 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <button
-                type='submit'
-                className='btn mt-3'
-                onClick={(e) => loginUser(e)}
-                disabled={isLoading}
-              >
+              <button type='submit' className='btn mt-3' onClick={loginUser}>
                 {isLoading ? (
                   <>
                     <span

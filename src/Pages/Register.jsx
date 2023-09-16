@@ -22,12 +22,11 @@ const Register = () => {
   const [password, setPassword] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
-  const registerUser = async (e) => {
-    e.preventDefault();
+  const registerUser = async () => {
     setIsLoading(true);
     try {
       await axios
-        .post('http://localhost:5000/register', {
+        .post('/register', {
           name,
           email,
           phone_no,
@@ -37,6 +36,7 @@ const Register = () => {
           console.log(res.data.message);
           if (res.data.status) {
             toast.success(res.data.message);
+            window.localStorage.setItem('token', res.data.data);
             navigate('/login');
           } else {
             toast.error(res.data.message);
@@ -121,7 +121,7 @@ const Register = () => {
                     <span
                       className='spinner-border spinner-border-sm me-2'
                       role='status'
-                      aria-hidden='true'
+                      aria-hidden='false'
                     ></span>
                     Creating...
                   </>

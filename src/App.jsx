@@ -10,12 +10,12 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import Forgetpass from './Pages/Forgetpass';
 import Dashboard from './Pages/Dashboard';
+import OtpPage from './Pages/OtpPage';
 import UsecontextProvider from './context/context';
 import Reset from './Pages/Reset';
 import { useEffect, useState } from 'react';
 
 axios.defaults.baseURL = 'https://gold-backend.onrender.com';
-axios.defaults.withCredentials = true;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +42,7 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/forget' element={<Forgetpass />} />
             <Route path='/reset' element={<Reset />} />
+            <Route path='/otp' element={<OtpPage />} />
             <Route path='/livegoldrate' element={<Livegoldrate />} />
             <Route path='/goldcalc' element={<GoldCalc />} />
             <Route path='/dashboard' element={<Dashboard />} />

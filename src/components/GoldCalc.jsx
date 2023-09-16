@@ -4,14 +4,21 @@ import { toast } from 'react-hot-toast';
 import TableCard from './TableCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins, faRing } from '@fortawesome/free-solid-svg-icons';
+import countries from '../data/gold.json';
 
 const GoldCalc = () => {
   const [goldrate, setGoldrate] = useState(0);
   const [weight, setWeight] = useState(0);
   const [wastage, setWastage] = useState(0);
   const [gstgold, setGstGold] = useState(0);
-  const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState('');
   const [wastageinGrams, setwastageinGrams] = useState();
+
+  const [selectedCountry, setSelectedCountry] = useState('');
+  const [goldRateForSelectedCountry, setGoldRateForSelectedCountry] =
+    useState('');
+  const [currencyForSelectedCountry, setCurrencyForSelectedCountry] =
+    useState('');
 
   const [savedValues, setSavedValues] = useState([]);
 
@@ -19,8 +26,8 @@ const GoldCalc = () => {
     const goldAmount = goldrate * weight;
     const wastageAmount = (wastage / 100) * goldAmount;
     const gstAmount = 0.03 * (goldAmount + wastageAmount);
-    const totalAmount = goldAmount + wastageAmount + gstAmount;
-    const wastageinGrams = (wastage / 100) * goldrate;
+    const totalAmount = Math.round(goldAmount + wastageAmount + gstAmount);
+    const wastageinGrams = Math.round((wastage / 100) * goldrate);
     setGstGold(gstAmount);
     setTotal(totalAmount);
     setwastageinGrams(wastageinGrams);
@@ -28,15 +35,16 @@ const GoldCalc = () => {
 
   const getSavedData = async () => {
     try {
-      await axios.get('/getData').then((res) => {
-        if (res.data.status) {
-          console.log(res.data.data);
-          setSavedValues(res.data.data);
-          toast.success(res.data.message);
-        } else {
-          toast.error('No data to show');
-        }
-      });
+      await axios
+        .post('/getData', { token: window.localStorage.getItem('token') })
+        .then((res) => {
+          if (res.data.status) {
+            setSavedValues(res.data.data);
+            toast.success(res.data.message);
+          } else {
+            toast.error('No data to show');
+          }
+        });
     } catch (error) {
       console.log('Something Went Wrong!!', error);
     }
@@ -53,10 +61,12 @@ const GoldCalc = () => {
           goldrate,
           gstgold,
           total,
+          token: window.localStorage.getItem('token'),
         })
         .then((res) => {
           if (res.data.status) {
             toast.success(res.data.message);
+            getSavedData();
           } else {
             toast.error(res.data.message);
           }
@@ -66,29 +76,26 @@ const GoldCalc = () => {
     }
   };
 
-  const deleteData = async (totalToDelete) => {
-    try {
-      await axios
-        .delete('/delete', {
-          data: { total: totalToDelete }, // Pass totalToDelete as an object in the data field
-        })
-        .then((res) => {
-          if (res.data.status) {
-            toast.success(res.data.message);
-            // Refresh the saved data after deletion
-            getSavedData();
-          } else {
-            toast.error(res.data.message);
-          }
-        });
-    } catch (error) {
-      console.log('Something went wrong:', error);
+  const handleCountryChange = (event) => {
+    const selectedValue = event.target.value;
+    setSelectedCountry(selectedValue);
+    if (selectedValue) {
+      const selectedCountryData = countries.countries.find(
+        (country) => country.name === selectedValue
+      );
+      if (selectedCountryData) {
+        setGoldRateForSelectedCountry(selectedCountryData.gold_rate_per_gram);
+        setCurrencyForSelectedCountry(selectedCountryData.currency);
+      }
+    } else {
+      setGoldRateForSelectedCountry('');
+      setCurrencyForSelectedCountry('');
     }
   };
 
   return (
     <>
-      <h2 className='title text-center mt-4'>
+      <h2 className='title text-center mt-5'>
         <FontAwesomeIcon icon={faCoins} />
         Gold Rate Calculator
       </h2>
@@ -100,26 +107,41 @@ const GoldCalc = () => {
         <div className='row'>
           <div className='col-md-6'>
             <div className='card calculator-card'>
-              <label className='input-label'>Gold Rate in &#x20b9;</label>
-              <br />
+              <label className='input-label mt-3'>Select a Country:</label>
+              <select className='input-gold' onChange={handleCountryChange}>
+                <option value=''>Select a country</option>
+                {countries.countries.map((country, index) => (
+                  <option key={index} value={country.name}>
+                    {country.name}
+                  </option>
+                ))}
+              </select>
+              <label className='input-label mt-4'>
+                Gold Rate in {currencyForSelectedCountry}:
+              </label>
+              <input
+                className='input-gold '
+                id='inputdefault'
+                type='text'
+                placeholder='Rated as per the country'
+                value={goldRateForSelectedCountry}
+                readOnly
+              />
+              <label className='input-label mt-4'>Gold Rate in &#x20b9;</label>
               <input
                 type='number'
                 className='input-gold'
                 placeholder='Enter the Gold Rate'
                 onChange={(e) => setGoldrate(e.target.value)}
               />
-              <br />
-              <label className='input-label'>Gold Weight in Grams</label>
-              <br />
+              <label className='input-label mt-4'>Gold Weight in Grams</label>
               <input
                 type='number'
                 className='input-gold'
                 placeholder='Enter the Weight'
                 onChange={(e) => setWeight(e.target.value)}
               />
-              <br />
-              <label className='input-label'>Wastage in %</label>
-              <br />
+              <label className='input-label mt-4'>Wastage in %</label>
               <input
                 type='number'
                 className='input-gold'
@@ -127,8 +149,7 @@ const GoldCalc = () => {
                 style={{ overflow: 'hidden' }}
                 onChange={(e) => setWastage(e.target.value)}
               />
-
-              <div className='but-gold'>
+              <div className='but-gold mb-1'>
                 <button
                   className='btn btn-gold'
                   type='submit'
@@ -139,7 +160,7 @@ const GoldCalc = () => {
               </div>
             </div>
           </div>
-          <div className='col-md-6 mt-4'>
+          <div className='col-md-6 table-card'>
             <div className='py-1'>
               <table className='table table-dark table-borderless'>
                 <thead>
@@ -178,7 +199,7 @@ const GoldCalc = () => {
             </div>
           </div>
         </div>
-        <TableCard savedValues={savedValues} deleteData={deleteData} />
+        <TableCard savedValues={savedValues} />
       </div>
     </>
   );

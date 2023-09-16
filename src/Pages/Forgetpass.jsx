@@ -1,6 +1,6 @@
 import axios from 'axios';
 import model from '../Assets/loginmodel.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,13 +12,16 @@ import {
 
 const Forgetpass = () => {
   const [email, setEmail] = useState();
+  const Navigate = useNavigate();
 
   const forgotPassword = () => {
     try {
       axios.post('/forgot', { email }).then((res) => {
-        console.log(res.data.message);
+        console.log(res);
         if (res.data.status) {
           toast.success(res.data.message);
+          window.localStorage.setItem('token', res.data.data);
+          Navigate('/otp');
         } else {
           toast.error(res.data.message);
         }

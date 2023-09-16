@@ -10,12 +10,8 @@ import { faRing } from '@fortawesome/free-solid-svg-icons';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../context/context';
-import { useContext } from 'react';
 
 const Home = () => {
-  const { setLoggedIn } = useContext(UserContext);
-
   return (
     <>
       <section className='home' id='home'>
@@ -48,7 +44,7 @@ const Home = () => {
               </a>
             </div>
             <div className='home_btn'>
-              <Link to='/login' className='btn text_cs'>
+              <Link to='/' className='btn text_cs'>
                 Explore
               </Link>
             </div>
